@@ -50,6 +50,32 @@ export default function EditUser(props) {
         return { ...previousState, token: 'AUTH'}
       });
 
+      props.passChildData2((data3) => [
+
+        ({
+          id: "0",
+          name: "",
+          wallet: 0,
+          rol: "",
+          total: 0
+        }),
+      ]);
+
+      props.passChildData3((data3) => [
+
+        ({
+          id: "0",
+          name: "",
+          ledgerId: "",
+          cost: 0,
+          most: 0,
+          vote: 0,
+          nay: 0,
+          approved: false,
+          userApproved: false
+        }),
+      ]);
+
       history.push('/');
   };
 

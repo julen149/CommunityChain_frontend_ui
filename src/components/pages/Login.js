@@ -38,16 +38,42 @@ export default function Login(props) {
               .then(data2 => {
                 props.passChildData2((data3) => [
 
-                  ...data2.map(({id, name, wallet}) => ({
+                  ...data2.map(({id, name, wallet, rol, total}) => ({
                     id,
                     name,
-                    wallet
+                    wallet,
+                    rol: rol,
+                    total
                   })),
                 ]);
             });
 
             props.passChildData(previousState => {
               return { ...previousState, name: data.name, username: data.username, email: data.email, id: data.id}
+            });
+
+            fetch('http://localhost:4000/registerUser/'+data.username, {
+              method: 'POST',
+              headers: { "Content-Type": "application/json"}
+            });
+
+            fetch('http://127.0.0.1:8080/api/users/contracts/'+username)
+              .then(response => response.json())
+              .then(data2 => {
+                props.passChildData3((data3) => [
+
+                  ...data2.map(({id, name, ledgerId, cost, most, vote, nay, approved, userApproved}) => ({
+                    id,
+                    name,
+                    ledgerId,
+                    cost,
+                    most, 
+                    vote,
+                    nay,
+                    approved,
+                    userApproved
+                  })),
+                ]);
             });
 
             });

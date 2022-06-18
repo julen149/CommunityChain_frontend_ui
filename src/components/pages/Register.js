@@ -46,6 +46,12 @@ export default function Register(props) {
                             return { ...previousState, name: data.name, username: data.username, email: data.email, id: data.id}
                         });
                         });
+
+                        fetch('http://localhost:4000/registerUser/'+username, {
+                          method: 'POST',
+                          headers: { "Content-Type": "application/json"}
+                        });
+
                     history.push('/');
                 });
           }  

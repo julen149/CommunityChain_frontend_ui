@@ -6,45 +6,48 @@ import myImage2 from '../images/img-2.jpg'
 import myImage3 from '../images/img-3.jpg'
 import myImage4 from '../images/img-4.jpg'
 import myImage5 from '../images/img-8.jpg'
+import blockchain from '../images/blockchain.jpg';
+import contract from '../images/contract.jpg';
+import github from '../images/github.png';
 
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1>Check out more information about our web!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src={myImage1}
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              label='Adventure'
-              path='/services'
+              src={blockchain}
+              text='Documentación Hyperledger Fabric'
+              label='Hyperledger Fabric'
+              path='https://hyperledger-fabric.readthedocs.io/en/release-2.2/'
             />
             <CardItem
-              src={myImage2}
-              text='Travel through the Islands of Bali in a Private Cruise'
-              label='Luxury'
-              path='/services'
+              src={contract}
+              text='Más información sobre los Smart Contract'
+              label='Smart Contract'
+              path='https://academy.bit2me.com/que-son-los-smart-contracts/'
             />
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src={myImage3}
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
-              path='/services'
+              src={github}
+              text='Código de la API decentralizada de la web'
+              label='Decentralized_API'
+              path='https://github.com/julen149/CommunityChain_Decentralized_API.git'
             />
             <CardItem
-              src={myImage4}
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
+              src={github}
+              text='Código Frontend de la web'
+              label='Frontend'
+              path='https://github.com/julen149/CommunityChain_frontend_ui.git'
             />
             <CardItem
-              src={myImage5}
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-up'
+              src={github}
+              text='Código de la API centralizada de la web'
+              label='Centralized_API'
+              path='https://github.com/julen149/CommunityChain_Centralized_API.git'
             />
           </ul>
         </div>

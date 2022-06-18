@@ -34,7 +34,9 @@ export default function CreateCommunity(props) {
                   {
                       id: data2.id,
                       name: data2.name,
-                      wallet: data2.wallet
+                      wallet: data2.wallet,
+                      rol: rol,
+                      total: data2.total
                   },
                 ]);
             });

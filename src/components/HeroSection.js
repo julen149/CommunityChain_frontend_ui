@@ -23,7 +23,7 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
-          link='/createcommunity'
+          link='/unircommunity'
         >
           ÚNETE A UNA COMUNIDAD <i className='far fa-play-circle' />
         </Button>
